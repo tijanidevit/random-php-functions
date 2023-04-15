@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="makeInvisible">this text should be invisible.</div>
+    <div class="makeBold">this text should be bold</div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>title1</th>
+                <th>title2</th>
+                <th>title3</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>column 1</td>
+                <td>column 2</td>
+                <td>column 3</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th>item 1</th>
+                <th>item 2</th>
+                <th>item 3</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
+
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script>
+    hideText ();
+    function hideText () { 
+        $('.makeInvisible').hide();
+        $('.makeBold').css('font-weight','bold');
+    }
+
+
+    $('#foo').submit(function(e){
+        e.preventDefault();
+        console.log('submitted');
+    })
+
+    console.log('object :>> ', checkString('hell'));
+    function checkString(foo){
+        return new Promise((resolve, reject) => {
+            if(foo === "hello") {
+                resolve("Good!")
+            } else {
+                reject("Bad!");
+            }
+        });
+    }
+</script>
+
+<script> 
+const isEmpty = (object) =>{
+    if (Object.keys(object) < 1) {
+        return true;
+    }
+    return false;
+}
+
+let empty_object = {}; 
+console.log("true",isEmpty(empty_object)); // true 
+let not_empty_object = { foo : 'bar' }; 
+console.log("false",isEmpty(not_empty_object)); // false 
+
+
+</script>
