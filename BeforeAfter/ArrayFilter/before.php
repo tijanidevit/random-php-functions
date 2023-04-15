@@ -8,4 +8,4 @@
         }
     }
 
-    print_r($evenNumbers); //[2,4,6,8,10]
+    echo json_encode($evenNumbers); //[2,4,6,8,10]
