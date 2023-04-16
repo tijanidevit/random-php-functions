@@ -3,8 +3,8 @@
     
     $chunkedArray = [];
     $chunk = [];
-
     $sn = 1;
+    
     foreach ($numbers as $number) {
         if ($sn % 6 == 1 && $sn > 4) {
             $chunk = [];
