@@ -13,5 +13,3 @@
         }
         return false;
     }
-
-    echo '<br />';
